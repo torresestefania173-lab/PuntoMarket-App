@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Punto Market - Prototipo FrontEnd</title>
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body id="arriba">
+
+  <section id="login" class="screen-section">
+    <div class="content-padding auth-box" data-aos="fade-down">
+      <img src="img/logotipo.png" alt="Punto Market Logo" style="max-width: 90px; width: 100%; height: auto; margin: 0 auto 10px auto; display: block;">
+      <h2>Punto Market</h2>
+      <div class="banner-utl">Mercadito Escolar</div>
+
+      <form action="#home" class="auth-form">
+        <div class="form-group">
+          <label for="login-email">Correo Institucional</label>
+          <input type="email" id="login-email" placeholder="ana.utl.edu.mx" required>
+        </div>
+
+        <div class="form-group">
+          <label for="login-pass">Contraseña</label>
+          <input type="password" id="login-pass" placeholder="••••••••••••" required>
+        </div>
+
+        <a href="#home" class="btn-yellow">Iniciar sesión</a>
+      </form>
+
+      <p style="margin-top: 15px; font-size: 0.85rem;">
+        ¿No tienes cuenta? <a href="#registro" style="color: var(--purple-main); font-weight: bold;">Regístrate aquí</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="registro" class="screen-section">
+    <header class="header-bar">
+      <span class="header-title">CREAR CUENTA - PUNTO MARKET</span>
+    </header>
+
+    <div class="content-padding" data-aos="fade-up">
+      <h3 style="margin-bottom: 12px;">Completa tu perfil</h3>
+
+      <form>
+        <div class="form-group">
+          <label>Nombre de Usuario (Visto por el público)</label>
+          <input type="text" placeholder="@nombre_de_usuario_único">
+        </div>
+
+        <div class="form-group">
+          <label>Nombre Completo</label>
+          <input type="text" placeholder="Tu nombre y apellidos">
+        </div>
+
+        <div class="form-group">
+          <label>Correo Institucional</label>
+          <input type="email" placeholder="usuario@utl.edu.mx">
+        </div>
+
+        <div class="form-group">
+          <label>Contraseña</label>
+          <input type="password" placeholder="••••••••••••">
+        </div>
+
+        <div class="form-group">
+          <label>Número de Teléfono</label>
+          <input type="tel" placeholder="Para coordinación de orden">
+        </div>
+
+        <p style="font-size: 0.8rem; font-weight: bold; margin-top: 10px;">Agrega tu Foto de Perfil</p>
+        <div style="text-align: center; margin: 10px 0;">
+          <span class="material-symbols-outlined" style="font-size: 3.5rem; color: #888;">account_circle</span>
+        </div>
+
+        <a href="#home" class="btn-yellow">CREAR MI PERFIL</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="home" class="screen-section">
+    <header class="header-bar">
+      <div class="header-title">¡Hola, Ana!</div>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <a href="#perfil" style="color: white; text-decoration: none; display: flex; align-items: center; font-size: 0.8rem;">
+          <span class="material-symbols-outlined">account_circle</span> Mi Perfil
+        </a>
+        <span class="material-symbols-outlined">notifications</span>
+      </div>
+    </header>
+
+    <div class="content-padding" data-aos="zoom-in">
+      <div class="search-bar">
+        <span class="material-symbols-outlined" style="color: #666;">search</span>
+        <input type="text" placeholder="Buscar">
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <img src="img/gomitas.jpg" alt="Gomitas">
+          <p class="product-title">Gomitas con chamoy</p>
+          <p class="product-price">$25.00</p>
+          <p class="product-vendor">Antojitos - Fidel</p>
+          <a href="#detalle" class="btn-yellow" style="padding: 5px 0; margin-top: 5px;">Ver / Pedir</a>
+        </article>
+
+        <article class="product-card">
+          <img src="img/stickers.jpg" alt="Stickers">
+          <p class="product-title">Stickers</p>
+          <p class="product-price">$20</p>
+          <p class="product-vendor">Tiendita</p>
+          <a href="#detalle" class="btn-yellow" style="padding: 5px 0; margin-top: 5px;">Ver / Pedir</a>
+        </article>
+
+        <article class="product-card">
+          <img src="img/peluche.jpg" alt="Peluche">
+          <p class="product-title">Peluche de Estambre</p>
+          <p class="product-price">$100</p>
+          <p class="product-vendor">Peluchitos y más</p>
+          <a href="#detalle" class="btn-yellow" style="padding: 5px 0; margin-top: 5px;">Ver / Pedir</a>
+        </article>
+
+        <article class="product-card">
+          <img src="img/sabritas.jpg" alt="Sabritas">
+          <p class="product-title">Mix de Sabritas</p>
+          <p class="product-price">$18</p>
+          <p class="product-vendor">Botanas</p>
+          <a href="#detalle" class="btn-yellow" style="padding: 5px 0; margin-top: 5px;">Ver / Pedir</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="publicar" class="screen-section">
+    <header class="header-bar">
+      <a href="#home" class="back-btn"><span class="material-symbols-outlined">arrow_back</span></a>
+      <span class="header-title">Publicar Producto</span>
+    </header>
+
+    <div class="content-padding" data-aos="fade-up">
+      <div style="background: var(--gray-light); height: 160px; border-radius: 8px; overflow: hidden; margin-bottom: 12px; text-align: center;">
+        <img src="img/peluche.jpg" alt="Preview" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+
+      <form>
+        <div class="form-group">
+          <label>Descripción del producto</label>
+          <input type="text" value="Peluche de Estambre">
+        </div>
+
+        <div class="form-group">
+          <label>Precio del Producto</label>
+          <input type="text" value="$100">
+        </div>
+
+        <div class="form-group">
+          <label>Nombre del Emprendimiento</label>
+          <input type="text" value="Peluchitos y más">
+        </div>
+
+        <a href="#perfil" class="btn-yellow">PUBLICAR PRODUCTO</a>
+      </form>
+    </div>
+  </section>
+
+  <section id="detalle" class="screen-section">
+    <header class="header-bar">
+      <a href="#home" class="back-btn"><span class="material-symbols-outlined">arrow_back</span></a>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="material-symbols-outlined">account_circle</span>
+        <div>
+          <strong style="font-size: 0.85rem; display: block;">Peluchitos y mas</strong>
+          <small>Ana Laura G.</small>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-padding" data-aos="zoom-in" style="text-align: center;">
+      <img src="img/peluche.jpg" alt="Peluche" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 10px;">
+      
+      <h3>Peluche de Estambre</h3>
+      <p style="color: green; font-weight: bold; font-size: 1.2rem; margin: 5px 0;">$100 MXN</p>
+      <span style="background: #fff3cd; color: #856404; padding: 4px 10px; border-radius: 10px; font-size: 0.8rem;">Disponible - 2 restantes</span>
+
+      <a href="#chats" class="btn-yellow" style="margin-top: 25px;">Confirmar y Enviar Pedido</a>
+    </div>
+  </section>
+
+  <section id="perfil" class="screen-section">
+    <header class="header-bar">
+      <a href="#home" class="back-btn"><span class="material-symbols-outlined">arrow_back</span></a>
+      <span class="header-title">Ana Laura G.</span>
+    </header>
+
+    <div class="content-padding" data-aos="fade-up">
+      <div class="profile-card">
+        <img src="https://ui-avatars.com/api/?name=Ana+Laura&background=6a1b9a&color=fff" alt="Ana Laura" class="profile-avatar">
+        <h4>Autorizado <span style="color: green;">✔</span></h4>
+
+        <div class="stats-container">
+          <div class="stat-box">
+            Ventas del día:
+            <strong>$100.00</strong>
+          </div>
+          <div class="stat-box">
+            Pedidos Activos:
+            <strong>🛒 1</strong>
+          </div>
+        </div>
+      </div>
+
+      <h4>MIS PUBLICACIONES (1)</h4>
+      <div style="display: flex; align-items: center; gap: 10px; background: white; padding: 8px; border-radius: 8px; margin-top: 10px; border: 1px solid #ccc;">
+        <img src="img/peluche.jpg" alt="Mini" style="width: 45px; height: 45px; border-radius: 6px; object-fit: cover;">
+        <div style="flex: 1; font-size: 0.8rem;">
+          <strong>Peluche de Estambre</strong> <span style="color: blue;">[Editar]</span><br>
+          <span>$100.00 - <small style="color: green;">Disponible</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="chats" class="screen-section">
+    <header class="header-bar">
+      <span class="header-title">Listado de Chats</span>
+      <a href="#home" class="back-btn"><span class="material-symbols-outlined">arrow_back</span></a>
+    </header>
+
+    <div class="content-padding" data-aos="fade-up">
+      <h3>Chats</h3>
+
+      <div style="margin-top: 15px;">
+        <a href="#chats" class="chat-item">
+          <div class="chat-avatar">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+          <div class="chat-info">
+            <strong>Miranda_Gt</strong>
+            <p style="font-size: 0.8rem; color: #666;">Okey Muchas Gracias</p>
+          </div>
+          <span class="chat-time">3 min</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <a href="#arriba" class="btn-top" title="Subir">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <nav class="bottom-nav">
+    <a href="#home" class="nav-item">
+      <span class="material-symbols-outlined">home</span>
+      <span>Inicio</span>
+    </a>
+    <a href="#publicar" class="nav-item">
+      <span class="material-symbols-outlined">add_box</span>
+      <span>Publicar</span>
+    </a>
+    <a href="#chats" class="nav-item">
+      <span class="material-symbols-outlined">chat</span>
+      <span>Chats</span>
+    </a>
+  </nav>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
+</body>
+</html>
